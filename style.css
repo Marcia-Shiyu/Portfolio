@@ -651,7 +651,7 @@ button { cursor: pointer; font-family: inherit; }
   aspect-ratio: 3 / 2;
   background: #ccc;
   border: 1px solid #bbb;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   font-size: 9px;
@@ -666,7 +666,8 @@ button { cursor: pointer; font-family: inherit; }
 .mini-thumb:hover { filter: brightness(0.85); border-color: #1a1a1a; }
 .mini-thumb img{
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
