@@ -2,10 +2,10 @@
 Add-Type -AssemblyName System.Drawing
 
 # Source directory containing the original images
-$srcDir = "C:\Users\szhan\OneDrive - University Of Oregon\Desktop\Internship&Job\Portfolio\Portfolio\Static Maps\Wuhan" # SBIC maps-do it again
+$srcDir = "C:\Users\szhan\OneDrive - University Of Oregon\Desktop\Internship\Portfolio\Portfolio\Static Maps\SBIC" # SBIC maps-do it again
 
 # Output directory for thumbnails
-$thumbDir = "C:\Users\szhan\OneDrive - University Of Oregon\Desktop\Internship&Job\Portfolio\Portfolio\Static Maps\thumbs"
+$thumbDir = "C:\Users\szhan\OneDrive - University Of Oregon\Desktop\Internship\Portfolio\Portfolio\Static Maps\thumbs"
 
 # Create the thumbnail folder if it does not exist
 New-Item -ItemType Directory -Force -Path $thumbDir | Out-Null
