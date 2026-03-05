@@ -755,11 +755,11 @@ button { cursor: pointer; font-family: inherit; }
 .about-left { padding: 22px 14px; border-right: 1px solid #eee; }
 .about-right { padding: 22px 22px; }
 .photo-box {
+  display: inline-block;
   width: 100%;
-  height: 150px;
+  height: 280px;
   background: #B5C4AE;
   border: 1px solid #bbb;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 9px;
@@ -768,7 +768,7 @@ button { cursor: pointer; font-family: inherit; }
   margin-bottom: 14px;
   overflow: hidden;
 }
-.photo-box img { width: 100%; height: 100%; object-fit: cover; }
+.photo-box img { width: auto; height: 100%; display: block; }
 .about-meta { font-size: 16px; color: #444; line-height: 2.3; }
 .about-contact { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
 .about-contact-item {
