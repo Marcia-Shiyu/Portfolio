@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shiyu Zhang — GIS Analyst and Cartographer. Spatial data visualization, urban analysis, and AI-driven mapping.">
+  <title>Shiyu Zhang — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a class="nav-brand" href="index.html">Shiyu Zhang</a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <a class="nav-link" href="about.html">About Me</a>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link">Maps <span class="arr">▾</span></span>
+        <div class="nav-dropdown">
+          <a href="maps.html#static">Static Maps</a>
+          <a href="maps.html#web">Web Maps</a>
+          <a href="maps.html#animation">Animation</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link">Projects <span class="arr">▾</span></span>
+        <div class="nav-dropdown">
+          <a href="projects.html#wuhan">Wuhan Catering Industry</a>
+          <a href="projects.html#sbic">SBIC Funding Analysis</a>
+          <a href="projects.html#tapwater">Western U.S. Tap Water</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="page-body">
+
+      <!-- HERO -->
+      <section class="hero">
+
+        <div class="hero-text">
+          <h1 class="hero-name">Shiyu Zhang</h1>
+          <div class="hero-role">SPACE &nbsp;·&nbsp; DATA &nbsp;·&nbsp; VISUALIZATION</div>
+          <p class="hero-desc">
+            I am a Ph.D. student in Geography at the University of Oregon specializing in GIScience, cartography, and GeoAI.
+          </p>
+          <p class="hero-desc">
+            I design spatial data visualizations and analytical maps that translate geographic complexity into clear representations.
+          </p>
+          <p class="hero-desc">
+            My work integrates cartographic design, spatial analysis, and AI-driven methods to reveal interpretable spatial patterns and support data-driven insights.
+          </p>
+        </div>
+
+
+      </section>
+
+      <!-- FEATURED WORKS — 2x2 grid -->
+      <section class="sec">
+        <div class="section-label">Featured Works</div>
+        <div class="featured-grid">
+
+          <!-- Row 1: Thematic Maps -->
+          <a class="feat-card" href="maps.html#static">
+            <div class="feat-card-img">
+              <img src="Static%20Maps/thumbs/wuhan-all-pois.jpg" alt="Spatial Distribution of Catering Establishments in Wuhan">
+            </div>
+            <div class="feat-card-body">
+              <div class="feat-card-type">Thematic Map</div>
+              <div class="feat-card-title">Spatial Distribution of Catering Establishments in Wuhan</div>
+              <div class="feat-card-link">View in Maps</div>
+            </div>
+          </a>
+
+          <a class="feat-card" href="projects.html#sbic">
+            <div class="feat-card-img">
+              <img src="Static%20Maps/thumbs/sbic-metro-vs-startup.jpg" alt="Metro Patterns vs. Top Startup Cities">
+            </div>
+            <div class="feat-card-body">
+              <div class="feat-card-type">3D Map</div>
+              <div class="feat-card-title">Metro Patterns vs. Top Startup Cities</div>
+              <div class="feat-card-link">View Project</div>
+            </div>
+          </a>
+
+          <!-- Row 2: Web Map Application -->
+          <div class="feat-card feat-card-web">
+            <div class="feat-card-img">
+              <iframe src="https://marcia-shiyu.github.io/DCUrbanTreeHealth/" title="DC Tree Health Interactive Map" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="feat-card-body">
+              <div class="feat-card-type">Web Map Application</div>
+              <div class="feat-card-title">DC Urban Tree Health</div>
+              <div class="feat-card-link"><a href="https://marcia-shiyu.github.io/DCTreeHealth/" target="_blank" rel="noopener">Open full screen ↗</a></div>
+            </div>
+          </div>
+
+          <a class="feat-card" href="maps.html#animation">
+            <div class="feat-card-img">
+              <img src="Animations/SBIC/Metro_animation/Yearly/Metro_Count.gif" alt="Annual SBIC Proposal Count by Metro Area Animation">
+            </div>
+            <div class="feat-card-body">
+              <div class="feat-card-type">Animation</div>
+              <div class="feat-card-title">Temporal Trends in Metro-Level SBIC Proposals</div>
+              <div class="feat-card-link">View in Animations</div>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-toolbar">
+    <div class="modal-title" id="modalTitle"></div>
+    <div class="modal-toolbar-right">
+      <button class="modal-zoom-btn" id="modalZoomOut" title="Zoom out">−</button>
+      <span class="modal-zoom-level" id="modalZoomLevel">Fit</span>
+      <button class="modal-zoom-btn" id="modalZoomIn" title="Zoom in">+</button>
+      <button class="modal-zoom-btn" id="modalZoomReset" title="Reset view">Fit</button>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+  </div>
+  <button class="modal-arrow modal-arrow-prev" id="modalPrev">&#8249;</button>
+  <button class="modal-arrow modal-arrow-next" id="modalNext">&#8250;</button>
+  <div class="modal-img" id="modalImg"></div>
+  <div class="modal-foot">
+    <a id="modalProjectLink" href="#" class="link-tag">Open Project</a>
+    <span class="modal-hint">Scroll to zoom &nbsp;·&nbsp; Drag to pan &nbsp;·&nbsp; Double-click to reset</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

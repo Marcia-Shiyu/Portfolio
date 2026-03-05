@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maps by Shiyu Zhang — static cartography, interactive web maps, and animated visualizations.">
+  <title>Maps — Shiyu Zhang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a class="nav-brand" href="index.html">Shiyu Zhang</a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <a class="nav-link" href="about.html">About Me</a>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link active">Maps <span class="arr">▾</span></span>
+        <div class="nav-dropdown">
+          <a href="#static">Static Maps</a>
+          <a href="#web">Web Maps</a>
+          <a href="#animation">Animation</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link">Projects <span class="arr">▾</span></span>
+        <div class="nav-dropdown">
+          <a href="projects.html#wuhan">Wuhan Catering Industry</a>
+          <a href="projects.html#sbic">SBIC Funding Analysis</a>
+          <a href="projects.html#tapwater">Western U.S. Tap Water</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="page-body">
+
+      <div class="page-header">
+        <h1 class="page-header-title">Maps</h1>
+        <div class="page-header-sub">Static &nbsp;·&nbsp; Web &nbsp;·&nbsp; Animation</div>
+      </div>
+
+      <div class="maps-container">
+
+        <!-- TABS -->
+        <div class="tabs" role="tablist" aria-label="Map categories">
+          <button class="tab-btn" data-tab="tab-static"    role="tab">Static Maps</button>
+          <button class="tab-btn" data-tab="tab-web"       role="tab">Web Maps</button>
+          <button class="tab-btn" data-tab="tab-animation" role="tab">Animation</button>
+        </div>
+
+        <!-- ── TAB 1: STATIC MAPS ──────────────────────── -->
+        <div class="tab-content" id="tab-static" role="tabpanel">
+
+          <!-- GROUP 1: 专题地图 -->
+          <div class="map-group">
+            <div class="map-group-header">
+              <div class="map-group-title">Thematic Maps</div>
+              <div class="carousel-nav">
+                <button class="carousel-prev" aria-label="Previous map" disabled>&#8249;</button>
+                <span class="carousel-counter">1 / 2</span>
+                <button class="carousel-next" aria-label="Next map">&#8250;</button>
+              </div>
+            </div>
+            <div class="map-carousel">
+              <div class="carousel-track">
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Spatial Distribution of Catering Establishments in Wuhan (POIs, N = 740)"
+                       data-modal-img="Static%20Maps/Wuhan/wuhan-all-pois.jpg"
+                       data-modal-project="projects.html#wuhan">
+                    <img decoding="async" src="Static%20Maps/thumbs/wuhan-all-pois.jpg" alt="Spatial Distribution of Catering Establishments in Wuhan">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Spatial Distribution of Catering Establishments in Wuhan (POIs, N = 740)</div>
+                    <p class="map-card-desc">Point distribution of 740 catering establishments across central Wuhan, based on POI data collected from OpenStreetMap.</p>
+                    <a href="projects.html#wuhan" class="link-tag">Wuhan Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Spatial Density of Catering Establishments in Wuhan"
+                       data-modal-img="Static%20Maps/Wuhan/wuhan-kde.jpg"
+                       data-modal-project="projects.html#wuhan">
+                    <img decoding="async" src="Static%20Maps/thumbs/wuhan-kde.jpg" alt="Spatial Density of Catering Establishments in Wuhan">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Spatial Density of Catering Establishments in Wuhan</div>
+                    <p class="map-card-desc">Kernel density surface showing areas with higher concentrations of catering establishments across Wuhan's urban core.</p>
+                    <a href="projects.html#wuhan" class="link-tag">Wuhan Project</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="break-bar">—</div>
+
+          <!-- GROUP 2: 3D Map -->
+          <div class="map-group">
+            <div class="map-group-header">
+              <div class="map-group-title">3D Map</div>
+              <div class="carousel-nav">
+                <button class="carousel-prev" aria-label="Previous map" disabled>&#8249;</button>
+                <span class="carousel-counter">1 / 9</span>
+                <button class="carousel-next" aria-label="Next map">&#8250;</button>
+              </div>
+            </div>
+            <div class="map-carousel">
+              <div class="carousel-track">
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Total SBIC Proposals by U.S. Metropolitan Area (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/sbic-total-proposals-metro.jpg"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/sbic-total-proposals-metro.jpg" alt="Total SBIC Proposals by U.S. Metropolitan Area">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Total Proposals — Metro Area</div>
+                    <p class="map-card-desc">Spatial distribution of total SBIC proposal counts across U.S. metropolitan areas, showing clusters of higher proposal counts in several coastal metro areas.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Total SBIC Award Amount by U.S. Metropolitan Area (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/sbic-total-award-metro.jpg"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/sbic-total-award-metro.jpg" alt="Total SBIC Award Amount by U.S. Metropolitan Area">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Total Award Amount — Metro Area</div>
+                    <p class="map-card-desc">Cumulative SBIC funding across U.S. metropolitan areas from 1980–2020, highlighting persistent geographic disparities in investment.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Average SBIC Award Amount per Proposal by U.S. Metropolitan Area (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/sbic-avg-award-metro.jpg"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/sbic-avg-award-metro.jpg" alt="Average SBIC Award Amount per Proposal by U.S. Metropolitan Area">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Avg. Award per Proposal — Metro Area</div>
+                    <p class="map-card-desc">Average SBIC funding per proposal across U.S. metropolitan areas, shown using a combined choropleth and spike map.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Total SBIC Proposals by Top-Ranked Smart Cities (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/sbic-total-proposals-smartcities.jpg"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/sbic-total-proposals-smartcities.jpg" alt="Total SBIC Proposals by Top-Ranked Smart Cities">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Total Proposals — Smart Cities</div>
+                    <p class="map-card-desc">Spatial distribution of SBIC proposal counts in top-ranked smart cities, shown within their broader metropolitan contexts.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Total SBIC Award Amount by Top-Ranked Smart Cities (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/sbic-total-award-smartcities.jpg"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/sbic-total-award-smartcities.jpg" alt="Total SBIC Award Amount by Top-Ranked Smart Cities">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Total Award Amount — Smart Cities</div>
+                    <p class="map-card-desc">Cumulative SBIC funding received by top-ranked smart cities, shown within their broader metropolitan contexts.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Average SBIC Award Amount per Proposal by Top-Ranked Smart Cities (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/sbic-avg-award-smartcities.jpg"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/sbic-avg-award-smartcities.jpg" alt="Average SBIC Award Amount per Proposal by Top-Ranked Smart Cities">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Avg. Award per Proposal — Smart Cities</div>
+                    <p class="map-card-desc">Average SBIC award amount per proposal in top-ranked smart cities, compared with their surrounding metropolitan areas.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="SBIC Award Patterns: Metropolitan Areas vs. Top Startup Cities (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/sbic-metro-vs-startup.jpg"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/sbic-metro-vs-startup.jpg" alt="SBIC Award Metropolitan Areas vs Top Startup Cities">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Metro Areas vs. Top Startup Cities</div>
+                    <p class="map-card-desc">Comparative map showing average SBIC award per proposal in metropolitan areas alongside top startup cities.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Cumulative SBIC Proposal Count by U.S. Area (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/count_cumulative_map.png"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/count_cumulative_map.jpg" alt="Cumulative SBIC Proposal Count Map">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Cumulative Proposal Count</div>
+                    <p class="map-card-desc">Cumulative distribution of SBIC proposal counts across U.S. areas from 1980 to 2020.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="KDE Density of SBIC Funding Across the United States (1980–2020)"
+                       data-modal-img="Static%20Maps/SBIC/kde_density_map_usa.png"
+                       data-modal-project="projects.html#sbic">
+                    <img decoding="async" src="Static%20Maps/thumbs/kde_density_map_usa.jpg" alt="KDE Density of SBIC Funding Across the USA">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">KDE Density — United States</div>
+                    <p class="map-card-desc">Kernel density estimation revealing spatial concentration of SBIC investment activity across the continental United States.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /tab-static -->
+
+        <!-- ── TAB 2: WEB MAPS ─────────────────────────── -->
+        <div class="tab-content" id="tab-web" role="tabpanel">
+          <div class="web-maps">
+
+            <!-- GROUP 1: Web Map Application -->
+            <div class="map-group-header">
+              <div class="map-group-title">Web Map Application</div>
+            </div>
+
+            <div class="web-card">
+              <div class="wc-frame">
+                <div class="wc-loading"><div class="wc-loading-spinner"></div>Loading map…</div>
+                <iframe
+                  data-src="https://marcia-shiyu.github.io/DCUrbanTreeHealth/"
+                  title="DC Tree Health Interactive Map"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="wc-foot">
+                <span class="wc-foot-title">DC Urban Tree Health <span class="wc-foot-tool">Mapbox GL JS</span></span>
+                <a href="https://marcia-shiyu.github.io/DCUrbanTreeHealth/" target="_blank" rel="noopener">Open full screen ↗</a>
+              </div>
+            </div>
+
+            <div class="break-bar">—</div>
+
+            <!-- GROUP 2: 3D Visualization -->
+            <div class="map-group-header">
+              <div class="map-group-title">3D Visualization</div>
+            </div>
+
+            <div class="web-card">
+              <div class="wc-frame">
+                <div class="wc-loading"><div class="wc-loading-spinner"></div>Loading map…</div>
+                <iframe
+                  data-src="https://marcia-shiyu.github.io/SBIC/States_Count_3D_animated.html"
+                  title="SBIC Proposal Count by State 3D Interactive Map"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="wc-foot">
+                <span class="wc-foot-title">SBIC Proposal Count by State <span class="wc-foot-tool">Python · Plotly</span></span>
+                <span>
+                  <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  &nbsp;&nbsp;
+                  <a href="https://marcia-shiyu.github.io/SBIC/States_Count_3D_animated.html" target="_blank" rel="noopener">Open full screen ↗</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="web-card-divider">·</div>
+
+            <div class="web-card">
+              <div class="wc-frame">
+                <div class="wc-loading"><div class="wc-loading-spinner"></div>Loading map…</div>
+                <iframe
+                  data-src="https://marcia-shiyu.github.io/SBIC/KDE_3D_animated.html"
+                  title="SBIC Funding Density Surface 3D Interactive Map"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="wc-foot">
+                <span class="wc-foot-title">SBIC Funding Density Surface <span class="wc-foot-tool">Python · Plotly</span></span>
+                <span>
+                  <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  &nbsp;&nbsp;
+                  <a href="https://marcia-shiyu.github.io/SBIC/KDE_3D_animated.html" target="_blank" rel="noopener">Open full screen ↗</a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div><!-- /tab-web -->
+
+        <!-- ── TAB 3: ANIMATION ────────────────────────── -->
+        <div class="tab-content" id="tab-animation" role="tabpanel">
+
+          <!-- GROUP 1: SBIC Proposal Activity -->
+          <div class="map-group">
+            <div class="map-group-header">
+              <div class="map-group-title">SBIC Proposal Activity — Metro Areas</div>
+              <div class="carousel-nav">
+                <button class="carousel-prev" aria-label="Previous" disabled>&#8249;</button>
+                <span class="carousel-counter">1 / 3</span>
+                <button class="carousel-next" aria-label="Next">&#8250;</button>
+              </div>
+            </div>
+            <div class="map-carousel">
+              <div class="carousel-track">
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Annual SBIC Proposal Count by U.S. Metro Area (1983–2024, Every Four Years)"
+                       data-modal-img="Animations/SBIC/Metro_animation/Yearly/Metro_Count.gif"
+                       data-modal-project="projects.html#sbic">
+                    <img src="Animations/SBIC/Metro_animation/Yearly/Metro_Count.gif" alt="Annual SBIC Proposal Count by Metro Area Animation">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Total Proposals — Metro Area</div>
+                    <p class="map-card-desc">Choropleth animation showing the number of SBIC proposals received by each U.S. metropolitan area at four-year snapshots from 1983 to 2024.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Annual SBIC Award Amount by U.S. Metro Area (1983–2024, Every Four Years)"
+                       data-modal-img="Animations/SBIC/Metro_animation/Yearly/Metro_Amount.gif"
+                       data-modal-project="projects.html#sbic">
+                    <img src="Animations/SBIC/Metro_animation/Yearly/Metro_Amount.gif" alt="Annual SBIC Award Amount by Metro Area Animation">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Total Award Amount — Metro Area</div>
+                    <p class="map-card-desc">Choropleth animation tracking total SBIC award amounts disbursed to each U.S. metropolitan area at four-year intervals from 1983 to 2024.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Annual Average SBIC Award per Proposal by U.S. Metro Area (1983–2024, Every Four Years)"
+                       data-modal-img="Animations/SBIC/Metro_animation/Yearly/Metro_Amount_per_Count.gif"
+                       data-modal-project="projects.html#sbic">
+                    <img src="Animations/SBIC/Metro_animation/Yearly/Metro_Amount_per_Count.gif" alt="Annual Average SBIC Award per Proposal by Metro Area Animation">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Avg. Award per Proposal — Metro Area</div>
+                    <p class="map-card-desc">Choropleth animation displaying the average SBIC award per proposal for each U.S. metropolitan area at four-year intervals from 1983 to 2024.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="break-bar">—</div>
+
+          <!-- GROUP 2: Cumulative SBIC Proposal Growth  -->
+          <div class="map-group">
+            <div class="map-group-header">
+              <div class="map-group-title">Cumulative SBIC Proposal Growth  — Metro Areas</div>
+              <div class="carousel-nav">
+                <button class="carousel-prev" aria-label="Previous" disabled>&#8249;</button>
+                <span class="carousel-counter">1 / 3</span>
+                <button class="carousel-next" aria-label="Next">&#8250;</button>
+              </div>
+            </div>
+            <div class="map-carousel">
+              <div class="carousel-track">
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Cumulative SBIC Proposal Count by U.S. Metro Area (1983–2024, Every Four Years)"
+                       data-modal-img="Animations/SBIC/Metro_animation/Accumulation/Metro_Count_Accum.gif"
+                       data-modal-project="projects.html#sbic">
+                    <img src="Animations/SBIC/Metro_animation/Accumulation/Metro_Count_Accum.gif" alt="Cumulative SBIC Proposal Count by Metro Area Animation">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Total Proposals — Metro Area</div>
+                    <p class="map-card-desc">Choropleth animation tracking the running total of SBIC proposals received by each U.S. metropolitan area from 1983 to 2024, updated every four years.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Cumulative SBIC Award Amount by U.S. Metro Area (1983–2024, Every Four Years)"
+                       data-modal-img="Animations/SBIC/Metro_animation/Accumulation/Metro_Amount_Accum.gif"
+                       data-modal-project="projects.html#sbic">
+                    <img src="Animations/SBIC/Metro_animation/Accumulation/Metro_Amount_Accum.gif" alt="Cumulative SBIC Award Amount by Metro Area Animation">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Total Award Amount — Metro Area</div>
+                    <p class="map-card-desc">Choropleth animation showing cumulative SBIC award amounts channeled into each U.S. metropolitan area from 1983 to 2024, updated every four years.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-card-img"
+                       data-modal-title="Cumulative Average SBIC Award per Proposal by U.S. Metro Area (1983–2024, Every Four Years)"
+                       data-modal-img="Animations/SBIC/Metro_animation/Accumulation/Metro_Amount_per_Count_Accum.gif"
+                       data-modal-project="projects.html#sbic">
+                    <img src="Animations/SBIC/Metro_animation/Accumulation/Metro_Amount_per_Count_Accum.gif" alt="Cumulative Average SBIC Award per Proposal by Metro Area Animation">
+                    <span class="zoom-hint">⊕</span>
+                  </div>
+                  <div class="map-card-body">
+                    <div class="map-card-title">Avg. Award per Proposal — Metro Area</div>
+                    <p class="map-card-desc">Choropleth animation depicting the running average SBIC award per proposal for each U.S. metropolitan area from 1983 to 2024, updated every four years.</p>
+                    <a href="projects.html#sbic" class="link-tag">SBIC Project</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /tab-animation -->
+
+      </div><!-- /maps-container -->
+
+    </div>
+  </div>
+</main>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-toolbar">
+    <div class="modal-title" id="modalTitle"></div>
+    <div class="modal-toolbar-right">
+      <button class="modal-zoom-btn" id="modalZoomOut" title="Zoom out">−</button>
+      <span class="modal-zoom-level" id="modalZoomLevel">Fit</span>
+      <button class="modal-zoom-btn" id="modalZoomIn" title="Zoom in">+</button>
+      <button class="modal-zoom-btn" id="modalZoomReset" title="Reset view">Fit</button>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+  </div>
+  <button class="modal-arrow modal-arrow-prev" id="modalPrev">&#8249;</button>
+  <button class="modal-arrow modal-arrow-next" id="modalNext">&#8250;</button>
+  <div class="modal-img" id="modalImg"></div>
+  <div class="modal-foot">
+    <a id="modalProjectLink" href="#" class="link-tag">Open Project</a>
+    <span class="modal-hint">Scroll to zoom &nbsp;·&nbsp; Drag to pan &nbsp;·&nbsp; Double-click to reset</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
