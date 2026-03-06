@@ -924,7 +924,6 @@ button { cursor: pointer; font-family: inherit; }
   transform-origin: center center;
   will-change: transform;
   pointer-events: none;
-  draggable: false;
 }
 .modal-foot {
   position: absolute;
