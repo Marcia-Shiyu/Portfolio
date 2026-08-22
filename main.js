@@ -30,6 +30,29 @@ function activateTab(tabId) {
   }
 }
 
+// resolve a URL hash to a tab (and, for sub-section anchors like "web-3d",
+// the specific element inside that tab to scroll to)
+function resolveHash(hash) {
+  var tabId = TAB_HASH_MAP[hash];
+  if (tabId) return { tabId: tabId, target: null };
+  var el = hash ? document.getElementById(hash) : null;
+  var panel = el ? el.closest('.tab-content') : null;
+  if (panel) return { tabId: panel.id, target: el };
+  return null;
+}
+
+function goToHash(hash) {
+  var resolved = resolveHash(hash);
+  if (!resolved) return false;
+  activateTab(resolved.tabId);
+  if (resolved.target) {
+    requestAnimationFrame(function() {
+      resolved.target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+  return true;
+}
+
 function initTabs() {
   var tabs = document.querySelectorAll('.tab-btn');
   if (!tabs.length) return;
@@ -48,10 +71,7 @@ function initTabs() {
 
   // activate from URL hash on load
   var hash = window.location.hash.replace('#', '');
-  var tabId = TAB_HASH_MAP[hash];
-  if (tabId) {
-    activateTab(tabId);
-  } else {
+  if (!goToHash(hash)) {
     // activate first tab by default
     tabs[0].classList.add('active');
     var firstPanel = document.getElementById(tabs[0].getAttribute('data-tab'));
@@ -61,8 +81,7 @@ function initTabs() {
   // also respond to hashchange (e.g., clicking dropdown links on same page)
   window.addEventListener('hashchange', function() {
     var h = window.location.hash.replace('#', '');
-    var tid = TAB_HASH_MAP[h];
-    if (tid) activateTab(tid);
+    goToHash(h);
   });
 }
 
@@ -308,4 +327,12 @@ document.addEventListener('DOMContentLoaded', function() {
   initModal();
   initClickableImages();
   initCarousels();
+
+  // Hide loading overlay once iframe finishes loading (for direct-src iframes on index page)
+  document.querySelectorAll('.wc-frame iframe:not([data-src])').forEach(function(f) {
+    f.addEventListener('load', function() {
+      var frame = f.closest('.wc-frame');
+      if (frame) frame.classList.add('loaded');
+    }, { once: true });
+  });
 });
